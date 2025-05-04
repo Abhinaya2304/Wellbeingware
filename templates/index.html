@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Journal Entry</title>
+</head>
+<body>
+    <h1>Journal Mood Tracker</h1>
+    <form method="POST">
+        <label>Mood:</label>
+        <select name="mood">
+            <option>Happy</option>
+            <option>Sad</option>
+            <option>Angry</option>
+            <option>Anxious</option>
+            <option>Neutral</option>
+        </select><br><br>
+
+        <label>Journal:</label><br>
+        <textarea name="journal" rows="5" cols="40"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if sentiment %}
+        <h2>Sentiment Score: {{ sentiment }}</h2>
+        <p><strong>Quote:</strong> {{ quote }}</p>
+    {% endif %}
+</body>
+</html>
